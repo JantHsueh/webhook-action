@@ -1,17 +1,19 @@
-name: 'Get Time Action'
-description: 'Get the time in the specified time zone'
+name: 'Get Git Log Action'
+description: 'Get git log action from specify git tag to the present'
 author: 'JantHsueh'
 branding:
   icon: arrow-right-circle
   color: gray-dark
 inputs:
-  timeZone:
-    description: 'time zone'
+  tag:
+    description: 'Specify git tag'
     required: true
-    default: 8
+    default: last_release
 outputs:
   log:
-    description: 'current time'
+    description: 'git logs'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.tag }}
