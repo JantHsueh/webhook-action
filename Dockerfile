@@ -10,7 +10,7 @@ LABEL "com.github.actions.icon"="message-square"
 LABEL "com.github.actions.color"="gray-dark"
 
 # Install Git
-RUN apt-get update && apt-get install git
+RUN apt-get update && apt-get install -y git
 
 # Add the entry point
 ADD entrypoint.sh /entrypoint.sh
