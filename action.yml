@@ -14,4 +14,4 @@ outputs:
     description: 'current time'
 runs:
   using: 'docker'
-  main: 'Dockerfile'
+  image: 'Dockerfile'
